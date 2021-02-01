@@ -15,43 +15,43 @@ public class ReadNumber {
         // tên hàng chục
         String[] tenNames = {
                 "",
-                " ten",
-                " twenty",
-                " thirty",
+                " Ten",
+                " Twenty",
+                " Thirty",
                 " forty",
-                " fifty",
-                " sixty",
-                " seventy",
-                " eighty",
-                " ninety"
+                " Fifty",
+                " Sixty",
+                " Seventy",
+                " Eighty",
+                " Ninety"
         };
         //tên hàng số từ 1 đến 19, số 0 là trướng hợp đặc biệt
         String[] numberNames = {
                 "",
-                " one",
-                " two",
-                " three",
-                " four",
-                " five",
-                " six",
-                " seven",
-                " eight",
-                " nine",
-                " ten",
-                " eleven",
-                " twelve",
-                " thirteen",
-                " fourteen",
-                " fifteen",
-                " sixteen",
-                " seventeen",
-                " eighteen",
-                " nineteen"
+                " One",
+                " Two",
+                " Three",
+                " Four",
+                " Five",
+                " Six",
+                " Seven",
+                " Eight",
+                " Nine",
+                " Ten",
+                " Eleven",
+                " Twelve",
+                " Thirteen",
+                " Fourteen",
+                " Fifteen",
+                " Sixteen",
+                " Seventeen",
+                " Eighteen",
+                " Nineteen"
         };
         //xét các điều kiện
         if (num < 0 || num > 999) {
             System.out.println("Out of ability");
-        } else if (num < 20 && num >= 0) {
+        } else if (num < 20) {
             if (num == 0) {
                 numberToWord = "Zero";
             } else {
@@ -61,11 +61,11 @@ public class ReadNumber {
             numberToWord = tenNames[tens] + numberNames[ones];
         } else {
             if (ones == 0 && tens == 0) {
-                numberToWord = numberNames[hundreds] + " hundred" + tenNames[tens] + numberNames[ones];
+                numberToWord = numberNames[hundreds] + " Hundred" + tenNames[tens] + numberNames[ones];
             } else if (tens < 2) {
-                numberToWord = numberNames[hundreds] + " hundred and " + numberNames[tens * 10 + ones];
+                numberToWord = numberNames[hundreds] + " Hundred and " + numberNames[tens * 10 + ones];
             } else {
-                numberToWord = numberNames[hundreds] + " hundred and" + tenNames[tens] + numberNames[ones];
+                numberToWord = numberNames[hundreds] + " Hundred and" + tenNames[tens] + numberNames[ones];
             }
         }
         //in ra sau khi chuyển đổi thành từ
