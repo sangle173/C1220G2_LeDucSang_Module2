@@ -69,6 +69,6 @@ public class ReadNumber {
             }
         }
         //in ra sau khi chuyển đổi thành từ
-        System.out.println(numberToWord);
+        System.out.println(numberToWord.trim());
     }
 }
