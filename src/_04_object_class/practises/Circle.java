@@ -1,4 +1,4 @@
-package _04_object.practises;
+package _04_object_class.practises;
 
 import java.util.Scanner;
 
