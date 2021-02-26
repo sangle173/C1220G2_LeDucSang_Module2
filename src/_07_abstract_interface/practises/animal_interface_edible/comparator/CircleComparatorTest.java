@@ -20,7 +20,7 @@ public class CircleComparatorTest {
         Comparator circleComparator = new CircleComparator();
         Arrays.sort(circles, circleComparator);
 
-        System.out.println("After-sorted:");
+        System.out.println("After-sorted :");
         for (Circle circle : circles) {
             System.out.println(circle);
         }

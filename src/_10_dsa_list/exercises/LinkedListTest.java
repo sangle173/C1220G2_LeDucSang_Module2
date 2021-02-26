@@ -1,6 +1,4 @@
-package _09_dsa_list.exercises;
-
-import org.junit.jupiter.api.Test;
+package _10_dsa_list.exercises;
 
 public class LinkedListTest {
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package _06_inheritance_polymorphism.exercises.point2d_point3d;
 
+import java.util.Arrays;
+
 public class Point3D extends Point2D {
     // private instance variables z
     private float z;

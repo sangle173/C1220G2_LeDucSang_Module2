@@ -1,6 +1,6 @@
 package _06_inheritance_polymorphism.exercises.point_moveablepoint;
 
-public class TextMovablePoint {
+public class TestMovablePoint {
     public static void main(String[] args) {
         MoveablePoint moveablePoint=new MoveablePoint();
         System.out.println(moveablePoint);

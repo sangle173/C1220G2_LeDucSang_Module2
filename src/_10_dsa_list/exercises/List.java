@@ -1,4 +1,4 @@
-package _09_dsa_list.exercises;
+package _10_dsa_list.exercises;
 
 public interface List<E> extends Iterable<E> {
 

@@ -1,6 +1,4 @@
-package _09_dsa_list.practises.simple_list;
-
-import java.util.List;
+package _10_dsa_list.practises.simple_list;
 
 public class MyListTest {
     public static void main(String[] args) {

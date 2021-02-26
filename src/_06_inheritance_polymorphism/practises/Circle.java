@@ -23,6 +23,9 @@ public class Circle extends Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+    public void getArea(double radius){
+
+    }
 
     @Override
     public String toString() {

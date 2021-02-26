@@ -1,4 +1,4 @@
-package _09_dsa_list.exercises;
+package _10_dsa_list.exercises;
 
 import java.util.Iterator;
 import java.util.Objects;
