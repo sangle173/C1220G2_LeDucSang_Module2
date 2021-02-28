@@ -130,6 +130,11 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
         return stringJoiner.toString();
     }
 
+    @Override
+    public <E1> E1 removeFirst() {
+        return null;
+    }
+
     private Node<E> getNodeFromHead(int index) {
         Node<E> current = head;
         for (int i = 1; i <= index; i++) {
@@ -163,6 +168,10 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
     public Iterator iterator() {
         return new MyIterator();
     }
+
+    public void addFirst(E element) {
+    }
+
 
     private class MyIterator implements Iterator {
         Node<E> current;

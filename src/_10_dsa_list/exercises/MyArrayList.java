@@ -120,6 +120,11 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
     }
 
     @Override
+    public <E1> E1 removeFirst() {
+        return null;
+    }
+
+    @Override
     public Iterator<E> iterator() {
         return null;
     }

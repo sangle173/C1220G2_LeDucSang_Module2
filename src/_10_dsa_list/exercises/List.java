@@ -25,4 +25,6 @@ public interface List<E> extends Iterable<E> {
     int lastIndexOf(E value);
 
     String toString();
+
+    <E> E removeFirst();
 }
