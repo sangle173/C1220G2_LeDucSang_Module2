@@ -2,7 +2,7 @@ package _10_dsa_list.exercises;
 
 public class LinkedListTest {
     public static void main(String[] args) {
-        LinkedList<String> linkedList=new LinkedList<String>();
+        LinkedMyList<String> linkedList=new LinkedMyList<String>();
         linkedList.add("A");
         linkedList.add("B");
         linkedList.add("C");

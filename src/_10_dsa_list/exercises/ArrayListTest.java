@@ -1,21 +1,20 @@
 package _10_dsa_list.exercises;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArrayListTest {
-    public static void main(String[] args) {
-        ArrayList<String> arrayList=new ArrayList<>();
-        arrayList.add("A");
-        arrayList.add("B");
-        arrayList.add("C");
-        arrayList.add("D",2);
-        System.out.println(arrayList);
-        System.out.println(arrayList);
-        arrayList.remove(2);
-        System.out.println(arrayList);
-        System.out.println(arrayList.indexOf("B"));
-        System.out.println(arrayList);
-
-
-
-
+    public static <E> void main(String[] args) {
+        MyArrayMyList<String> myArrayList =new MyArrayMyList<>();
+        myArrayList.add("A");
+        myArrayList.add("B");
+        myArrayList.add("C");
+        myArrayList.add("D",2);
+        System.out.println(myArrayList);
+        System.out.println(myArrayList);
+        myArrayList.remove(2);
+        System.out.println(myArrayList);
+        System.out.println(myArrayList.indexOf("B"));
+        System.out.println(myArrayList);
     }
 }

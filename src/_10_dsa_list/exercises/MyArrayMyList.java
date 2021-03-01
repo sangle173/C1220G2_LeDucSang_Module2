@@ -3,12 +3,13 @@ package _10_dsa_list.exercises;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class ArrayList<E> implements List<E>, Iterable<E> {
+public class MyArrayMyList<E> implements MyList<E>, Iterable<E> {
     private E[] array;
     private int size = 0;
     private final int DEFAULT_CAPACITY = 10;
+    private Object [] data;
 
-    public ArrayList() {
+    public MyArrayMyList() {
         array = (E[]) new Object[DEFAULT_CAPACITY];
     }
 
@@ -59,8 +60,21 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 
     @Override
     public void clear() {
+        for (int i = 0; i <size; i++) {
+            data[i]=null;
+        }
         size = 0;
     }
+
+    @Override
+    public Object clone() {
+        Object[] arrayList = new Object[0];
+        for (int i = 0; i <size ; i++) {
+            arrayList[i]= data[i];
+        }
+        return arrayList;
+    }
+
 
     @Override
     public int size() {

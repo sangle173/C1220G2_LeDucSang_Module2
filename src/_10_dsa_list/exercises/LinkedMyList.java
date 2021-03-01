@@ -4,12 +4,11 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class LinkedList<E> implements List<E>, Iterable<E>{
+class LinkedMyList<E> implements MyList<E>, Iterable<E> {
 
     private Node<E> head;
     private Node<E> tail;
     private int size;
-
 
     public void add(E value) {
         Node<E> newNode = new Node<>(value);
@@ -25,10 +24,10 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
 
 
     public void add(E value, int index) {
-        if(index > size) {
+        if (index > size) {
             throw new IndexOutOfBoundsException("index param " + index + " should by between 0 and " + size);
         }
-        if(index == size){
+        if (index == size) {
             add(value);
             return;
         }
@@ -37,7 +36,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
         newNode.next = current;
         newNode.prev = current.prev;
         current.prev = newNode;
-        if(current == head){
+        if (current == head) {
             head = newNode;
         } else {
             newNode.prev.next = newNode;
@@ -49,7 +48,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
     public E remove(int index) {
         Node<E> current = getNodeByIndex(index);
         E value;
-        if(size == 1) {
+        if (size == 1) {
             value = head.value;
             clear();
             return value;
@@ -85,6 +84,11 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
         size = 0;
     }
 
+    @Override
+    public Object clone() {
+        return null;
+    }
+
     public int size() {
         return size;
     }
@@ -100,7 +104,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
     public int indexOf(E value) {
         Node<E> current = head;
         for (int i = 0; i < size; i++) {
-            if(Objects.equals(current.value, value)){
+            if (Objects.equals(current.value, value)) {
                 return i;
             }
             current = current.next;
@@ -110,8 +114,8 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
 
     public int lastIndexOf(Object value) {
         Node<E> current = tail;
-        for (int i = size-1; i >= 0; i--) {
-            if(Objects.equals(current.value, value)){
+        for (int i = size - 1; i >= 0; i--) {
+            if (Objects.equals(current.value, value)) {
                 return i;
             }
             current = current.prev;
@@ -145,20 +149,20 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
 
     private Node getNodeFromTail(int index) {
         Node<E> current = tail;
-        for (int i = size-2; i >= index; i--) {
+        for (int i = size - 2; i >= index; i--) {
             current = current.prev;
         }
         return current;
     }
 
     private Node<E> getNodeByIndex(int index) {
-        if(index >= size) {
-            throw new IndexOutOfBoundsException("index param " + index + " should by between 0 and " + (size-1));
+        if (index >= size) {
+            throw new IndexOutOfBoundsException("index param " + index + " should by between 0 and " + (size - 1));
         }
         if (index == 0) {
             return head;
         }
-        if (index == size-1) {
+        if (index == size - 1) {
             return tail;
         }
         return index < size / 2 ? getNodeFromHead(index) : getNodeFromTail(index);
@@ -176,6 +180,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
     private class MyIterator implements Iterator {
         Node<E> current;
         int i = 0;
+
         @Override
         public boolean hasNext() {
             if (size == 0 || i >= size) {
@@ -187,7 +192,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
 
         @Override
         public E next() {
-            if(current == null) {
+            if (current == null) {
                 current = head;
             }
             Node<E> node = current;
@@ -202,7 +207,7 @@ public class LinkedList<E> implements List<E>, Iterable<E>{
         Node<E> prev;
         Node<E> next;
 
-        public Node(E value){
+        public Node(E value) {
             this.value = value;
         }
     }

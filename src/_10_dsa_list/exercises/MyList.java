@@ -1,6 +1,6 @@
 package _10_dsa_list.exercises;
 
-public interface List<E> extends Iterable<E> {
+public interface MyList<E> extends Iterable<E> {
 
     void add(E value);
 
@@ -13,6 +13,7 @@ public interface List<E> extends Iterable<E> {
     E set(E value, int index);
 
     void clear();
+    Object clone();
 
     int size();
 

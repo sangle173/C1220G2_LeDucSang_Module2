@@ -1,8 +1,22 @@
 package _11_dsa_stack_queue.exercises.reverse_stack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ReverseTest {
+//    public static List<Integer> inputNumber(){
+//        List<Integer> listNumber=new ArrayList<Integer>();
+//        Scanner scanner=new Scanner(System.in);
+//        int number;
+//        while (true){
+//            number=scanner.nextInt();
+//            listNumber.add(number);
+//        }
+//
+//    }
+
     public static void main(String[] args) {
         ReverseStack reverseStack = new ReverseStack();
         Scanner scanner = new Scanner(System.in);
