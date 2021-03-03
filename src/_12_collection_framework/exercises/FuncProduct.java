@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class FuncProduct {
-    public static final String PATH = "product.csv";
+    public static final String PATH = "D:\\C1220G2_LeDucSang_Module2\\src\\_12_collection_framework\\exercises\\product.csv";
 
     public static void writeFile(List<Product> list, boolean writeMode) {
         File file = new File(PATH);
