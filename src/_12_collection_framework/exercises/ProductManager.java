@@ -141,8 +141,8 @@ public class ProductManager {
     }
 
     public static void displayMenuSort() {
-        System.out.println("1.Sort up ascending \n" +
-                "2.Sort down ascending \n" +
+        System.out.println("1.Sort ascending type \n" +
+                "2.Sort decreasing type \n" +
                 "3.Back to Main Menu \n" +
                 "0.Exit");
         int choiceSortType;
