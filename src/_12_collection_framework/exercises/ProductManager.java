@@ -152,10 +152,10 @@ public class ProductManager {
             choiceSortType = Integer.parseInt(scanner.nextLine());
             switch (choiceSortType) {
                 case 1:
-                    FuncProduct.sortUpAscending();
+                    FuncProduct.sortAscending();
                     break;
                 case 2:
-                    FuncProduct.sortDownAscending();
+                    FuncProduct.sortDecreasing();
                     break;
                 case 3:
                     displayMain();
